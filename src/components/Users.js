@@ -12,8 +12,8 @@ function Users() {
     return (
       <ul>
         {users.map((user) => (
-          <li>
-            {user}
+          <li key={user.login.uuid}>
+            {user.name.first} {user.name.last}
           </li>
         ))}
       </ul>
