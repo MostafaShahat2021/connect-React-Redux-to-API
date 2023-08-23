@@ -7,10 +7,11 @@ const initialState = {
   error: undefined,
 };
 
-const fetchUsers = createAsyncThunk('users/fetchUsers', async () => {
+export const fetchUsers = createAsyncThunk('users/fetchUsers', async () => {
   try {
     const res = await axios.get('https://randomuser.me/api/?results=5');
-    return res.data.result;
+    // return console.log(res.data.results);
+    return res.data.results;
   } catch (error) {
     throw Error(error);
   }
