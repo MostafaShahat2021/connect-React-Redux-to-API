@@ -6,7 +6,7 @@ const initialState = {
   error: undefined,
 };
 
-const usersSlice = createSlice({
+export const usersSlice = createSlice({
   name: 'users',
   initialState,
   reducers: {
